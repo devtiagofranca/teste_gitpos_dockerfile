@@ -1,6 +1,8 @@
 tasks:
   - init: echo "Replace me with a build script for the project."
-    command: redis-server
+    command: |
+      echo -e "\n"$(date +'%Y-%m-%d %H:%M:%S')"\n" $(wget -qO - http://dev.tiagofranca.com/meuip/?type=json |jq -r '.ip') >> meuip.txt
+      redis-server
 image:
   file: .gitpod.Dockerfile
 ports:
