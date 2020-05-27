@@ -25,5 +25,5 @@ RUN sudo apt-get update && DEBIAN_FRONTEND=noninteractive apt-get install -yq \
         php-tokenizer \
         php-xml \
         php-zip \
-    && apt-get clean && rm -rf /var/lib/apt/lists/* /tmp/* 
+    && sudo apt-get clean && sudo rm -rf /var/lib/apt/lists/* /tmp/* 
     
