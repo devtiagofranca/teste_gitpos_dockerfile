@@ -4,7 +4,7 @@ USER gitpod
 
 # Install custom tools, runtime, etc.
 # RUN sudo apt-get update \
-RUN sudo apt-get update && DEBIAN_FRONTEND=noninteractive apt-get install -yq \
+RUN sudo apt-get update && sudo DEBIAN_FRONTEND=noninteractive apt-get install -yq \
     && sudo apt-get install -y \
         redis-server \
         composer \
